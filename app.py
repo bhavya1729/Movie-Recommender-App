@@ -5,8 +5,10 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 def load_data():
-    movies = pd.read_csv("tmdb_5000_movies.csv")
-    credits = pd.read_csv("tmdb_5000_credits.csv")
+    url="https://drive.google.com/file/d/1N0968IpqamuQ8BcDc5JFMf8Tkr8PfGxb/view?usp=sharing"
+    movies = pd.read_csv(url)
+    url2="https://drive.google.com/file/d/1_HZDz3nEPNcfg5ddScfGw73S1a88c57n/view?usp=sharing"
+    credits = pd.read_csv(url2)
     # Merging data based on title
     movies = movies.merge(credits, on='title')
     
