@@ -5,9 +5,9 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 def load_data():
-    url="https://drive.google.com/file/d/1N0968IpqamuQ8BcDc5JFMf8Tkr8PfGxb/view?usp=sharing"
+    url="https://drive.google.com/uc?id=1N0968IpqamuQ8BcDc5JFMf8Tkr8PfGxb"
     movies = pd.read_csv(url)
-    url2="https://drive.google.com/file/d/1_HZDz3nEPNcfg5ddScfGw73S1a88c57n/view?usp=sharing"
+    url2="https://drive.google.com/uc?id=1_HZDz3nEPNcfg5ddScfGw73S1a88c57n"
     credits = pd.read_csv(url2)
     # Merging data based on title
     movies = movies.merge(credits, on='title')
@@ -146,3 +146,4 @@ if mode == 'By Genre':
         results = recommend_by_genre(genre)
         for r in results:
             st.markdown(r)
+
